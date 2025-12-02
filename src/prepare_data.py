@@ -1,5 +1,5 @@
 import pandas as pd
-import sklearn.model_selection as train_test_split
+from sklearn.model_selection import train_test_split
 from pathlib import Path
 
 RAW_DATA_PATH = Path("data/raw/iris.csv")
@@ -8,6 +8,8 @@ PROCESSED_DIR = Path("data/processed")
 def main():
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(RAW_DATA_PATH)
+
+    print(df.head())
 
     train_df, test_df = train_test_split(
         df,
