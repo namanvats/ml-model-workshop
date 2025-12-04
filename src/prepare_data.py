@@ -13,7 +13,7 @@ def main():
 
     train_df, test_df = train_test_split(
         df,
-        test_size=0.2,
+        test_size=0.3,
         random_state=42,
         stratify=df["target"],
     )

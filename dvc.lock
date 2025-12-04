@@ -9,17 +9,17 @@ stages:
       size: 2777
     - path: src/prepare_data.py
       hash: md5
-      md5: d6dc66a72ac697fa9cb75c4d6ee0769c
+      md5: dbbb31427424b339ba2c34f5264a93d7
       size: 605
     outs:
     - path: data/processed/test.csv
       hash: md5
-      md5: 12633f6b7b7282fb932761e33b24d21d
-      size: 617
+      md5: 85b7744d997a1e59815f4b3cc0f5cc29
+      size: 887
     - path: data/processed/train.csv
       hash: md5
-      md5: 47fd89ce6c52daa555a94670836c67a2
-      size: 2237
+      md5: 08e8aff2619333bf5d3c1edcdc96732b
+      size: 1967
   validate:
     cmd: python src/validate_data.py
     deps:
@@ -36,12 +36,12 @@ stages:
     deps:
     - path: data/processed/test.csv
       hash: md5
-      md5: 12633f6b7b7282fb932761e33b24d21d
-      size: 617
+      md5: 85b7744d997a1e59815f4b3cc0f5cc29
+      size: 887
     - path: data/processed/train.csv
       hash: md5
-      md5: 47fd89ce6c52daa555a94670836c67a2
-      size: 2237
+      md5: 08e8aff2619333bf5d3c1edcdc96732b
+      size: 1967
     - path: src/train_model.py
       hash: md5
       md5: 9411da5deab610466795f038c630456b
@@ -49,9 +49,9 @@ stages:
     outs:
     - path: metrics/metrics.json
       hash: md5
-      md5: edca53155170afe591db48f12327b1ff
+      md5: 461ae3d15fb05379f9058e727f1011f7
       size: 95
     - path: models/iris_logistic_regression.pkl
       hash: md5
-      md5: bcf71d703f5cc8a73134c9e7de79b9f1
+      md5: 4ccdfc0c70529b3bde8371d13ee3f532
       size: 1327
