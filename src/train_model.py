@@ -31,7 +31,7 @@ def main():
     X_test = test_df.drop(columns=["target"])
     y_test = test_df["target"]
 
-    model = LogisticRegression(max_tier=200, random_state=42)
+    model = LogisticRegression(max_iter=200, random_state=42)
     model.fit(X_train, y_train)
 
     preds = model.predict(X_test)
@@ -49,7 +49,7 @@ def main():
         json.dump(metrics, f)
     
     print(f"[OK] Model trained and metrics saved to {metrics_path}")
-    print(f"[OK] Accuracy Score : {accuracy.round(4)}")
+    print(f"[OK] Accuracy Score : {accuracy:.4f}")
     print(f"[OK] Git Commit Hash : {get_git_commit_hash()}")
 
 
